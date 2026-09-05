@@ -1,10 +1,14 @@
+import FilterLibrary from "../components/FilterLibrary";
+import CardsLibrary from "../components/LibraryComponents/CardsLibrary";
+import LibraryHead from "../components/LibraryComponents/LibraryHead";
 
 
 function LibraryPages() {
   return (
     <div >
-      <p>Conteudo</p>
-      
+      <LibraryHead />
+      <FilterLibrary />
+      <CardsLibrary />
     </div>
   );
 }
