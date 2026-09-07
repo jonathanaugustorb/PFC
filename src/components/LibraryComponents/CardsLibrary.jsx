@@ -44,7 +44,7 @@ function CardsLibrary() {
               <span className="font-semibold text-white">{dificuldade}</span>
             </div>
             <div className="mt-auto text-center">
-              <button className="bg-red-500 py-1 px-4 font-medium text-white max-w-2/3">
+              <button className="bg-red-500 py-1 px-4 font-medium text-white max-w-2/3 hover:bg-red-900 cursor-pointer">
                 VER TÉCNICA
               </button>
             </div>
