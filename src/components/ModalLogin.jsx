@@ -3,7 +3,7 @@ import { X } from "lucide-react";
 function ModalLogin({ isOpen, children, setCloseModal }) {
   const BackEstilo = "fixed inset-0 bg-black/75 z-50";
   const modalEstilo =
-    "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-gray-400-50 px-10 py-5";
+    "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-gray-400-50 px-5 py-2";
 
   if (isOpen) {
     return (

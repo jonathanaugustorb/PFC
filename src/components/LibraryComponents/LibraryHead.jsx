@@ -2,7 +2,7 @@ import { Search } from "lucide-react";
 
 function LibraryHead() {
   return (
-    <div className="py-4 flex justify-center">
+    <div className="py-4 flex justify-center gap-3">
       <div className="w-px h-8 bg-red-500 mx-6"></div>
       <div>
         <h1 className="font-bold text-4xl text-white">
@@ -14,13 +14,13 @@ function LibraryHead() {
         </p>
       </div>
 
-      <div className=" gap-2 py-6 flex  ">
+      <div className="gap-2 flex px-2 py-3">
         <input
           type="search"
-          placeholder=""
-          className="border-2 border-gray-200/50 rounded-md text-white"
+          placeholder="Pesquise"
+          className=" text-center border-2 border-gray-200/50 rounded-2xl text-white"
         />
-        <button className="text-white p-2 bg-red-300 rounded-md">
+        <button className="text-red-200 p-2 bg-red-500 rounded-md hover:bg-red-900 cursor-pointer">
           <Search />
         </button>
       </div>
