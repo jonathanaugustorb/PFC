@@ -2,4 +2,9 @@
 
 @theme {
   --font-montserrat: 'Montserrat', sans-serif;
+  --breakpoint-*: initial;
+  --breakpoint-sm: 25rem;
+  --breakpoint-md: 40rem;
+  --breakpoint-lp: 64rem;
+  --breakpoint-lg: 80rem;
 }
