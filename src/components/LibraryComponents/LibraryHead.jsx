@@ -8,7 +8,6 @@ import {
 
 const FORM_INICIAL = {
   nome: "",
-  caracteristicas: "",
   grupoMuscular: "",
   nivel: "",
   descricaoExecucao: "",
@@ -70,8 +69,8 @@ function LibraryHead() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    if (!form.nome.trim() || !form.grupoMuscular || !form.nivel) {
-      setErro("Preencha nome, grupo muscular e nível antes de cadastrar.");
+    if (!form.nome.trim() || !form.grupoMuscular || !form.nivel || !form.descricaoExecucao.trim()) {
+      setErro("Preencha nome, grupo muscular, nível e Descrição de Execução do Exercício antes de cadastrar.");
       return;
     }
 
@@ -131,15 +130,6 @@ function LibraryHead() {
                 type="text"
                 id="nome"
                 value={form.nome}
-                onChange={handleChange}
-                placeholder="Digite"
-                className="bg-gray-500 rounded-xl p-1 text-white"
-              />
-              <p>Caracteristicas do exercicio</p>
-              <input
-                type="text"
-                id="caracteristicas"
-                value={form.caracteristicas}
                 onChange={handleChange}
                 placeholder="Digite"
                 className="bg-gray-500 rounded-xl p-1 text-white"

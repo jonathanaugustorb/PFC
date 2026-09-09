@@ -10,10 +10,13 @@ export async function listarNiveis() {
   return data;
 }
 
+export async function listarExercicios(){
+  const { data } = await api.get("/exercicios");
+  return data;
+}
 /**
  * @param {{
  *   nome: string,
- *   caracteristicas: string,
  *   grupoMuscular: string,
  *   nivel: string,
  *   descricaoExecucao: string,
@@ -27,3 +30,5 @@ export async function criarExercicio(exercicio) {
   const { data } = await api.post("/exercicios", exercicio);
   return data;
 }
+
+

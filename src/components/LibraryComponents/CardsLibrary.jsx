@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
+import { listarExercicios } from "../../services/exercicioService";
 
 function CardsLibrary() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/images/exercicios_academia.json")
-      .then((response) => response.json())
-      .then(setData);
+    listarExercicios().then(setData);
   }, []);
 
   if (!data || !data.length) return null;
@@ -14,7 +13,7 @@ function CardsLibrary() {
   return (
     <div className="w-full flex mx-auto p-4 overflow-hidden overflow-x-auto space-x-4 md:space-x-6 lp:space-x-8 lg:w-2/3">
       {data.map((item) => {
-        const { id, title, img, exercicio, auxiliares, dificuldade } = item;
+        const { id, nome, grupoMuscular, nivel, gifUrl, equipamento } = item;
 
         return (
           <div
@@ -26,22 +25,22 @@ function CardsLibrary() {
               className=" rounded-md bg-red-500 px-2 py-1
                         text-xs font-medium text-white self-end"
             >
-              <span>{title}</span>
+              <span>{grupoMuscular}</span>
             </div>
 
             <div className="max-h-screen [50px] max-w-28 self-center">
-              <img src={img} alt={title} />
+              <img src={gifUrl} alt={nome} />
             </div>
 
             <div className="flex flex-col gap-1">
               <span className="font-montserrat text-xl text-red-200">
-                {exercicio}{" "}
+                {nome}{" "}
               </span>
-              <span className="font-semibold text-white">{auxiliares}</span>
+              <span className="font-semibold text-white">{equipamento}</span>
               <span className="font-semibold text-1xl text-red-200">
                 Dificuldade
               </span>
-              <span className="font-semibold text-white">{dificuldade}</span>
+              <span className="font-semibold text-white">{nivel}</span>
             </div>
             <div className="mt-auto text-center">
               <button className="bg-red-500 py-1 px-4 font-medium text-white max-w-2/3 hover:bg-red-900 cursor-pointer">
