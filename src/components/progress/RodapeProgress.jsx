@@ -11,9 +11,7 @@ function RodapeProgress() {
         <div className="lp:w-3/5">
           <p className="text-sm text-gray-300 wrap-break-word">
             <span className="font-semibold text-white">Como usar? </span>
-            Atualize os números a cada sessão ou ao longo do dia. As fórmulas
-            seguem referências clássicas de Mifflin-St Jeor para o gasto
-            energético e 35 ml por quilo para a hidratação. Para ajustes finos,
+            Atualize os números a cada sessão de treino. Para ajustes finos,
             consulte um profissional.
           </p>
         </div>

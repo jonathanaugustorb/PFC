@@ -6,6 +6,9 @@ import CalculadoraTMB from "../components/progress/CalculadoraTMB";
 import CalculadoraHidratacao from "../components/progress/CalculadoraHidratacao";
 import RodapeProgress from "../components/progress/RodapeProgress";
 
+// Religar quando /metricas/gasto-energetico e /metricas/hidratacao existirem no backend.
+const EXIBIR_CALCULADORAS_SEM_BACKEND = false;
+
 function ProgressPages() {
   const [pesoKg, setPesoKg] = useState("");
 
@@ -14,8 +17,12 @@ function ProgressPages() {
       <HeadProgress />
       <AvisoLegal />
       <VolumeTreino />
-      <CalculadoraTMB pesoKg={pesoKg} aoAlterarPeso={setPesoKg} />
-      <CalculadoraHidratacao pesoKg={pesoKg} aoAlterarPeso={setPesoKg} />
+      {EXIBIR_CALCULADORAS_SEM_BACKEND && (
+        <CalculadoraTMB pesoKg={pesoKg} aoAlterarPeso={setPesoKg} />
+      )}
+      {EXIBIR_CALCULADORAS_SEM_BACKEND && (
+        <CalculadoraHidratacao pesoKg={pesoKg} aoAlterarPeso={setPesoKg} />
+      )}
       <RodapeProgress />
     </div>
   );
