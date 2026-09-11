@@ -120,7 +120,7 @@ function CalculadoraTMB({ pesoKg, aoAlterarPeso }) {
         <>
           <span className="font-semibold text-white">O que é TMB? </span>É a
           energia que seu corpo consome em repouso, só para manter as funções
-          vitais. Calculamos pela fórmula Mifflin-St Jeor — a referência para
+          vitais. Calculamos pela fórmula Mifflin-St Jeor a referência para
           montar superávit (ganho) ou déficit (perda).
         </>
       }

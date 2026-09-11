@@ -47,7 +47,7 @@ function ImagemExercicio({ src, alt }) {
   );
 }
 
-function CardsLibrary() {
+function CardsLibrary({ grupoSelecionado }) {
   const [exercicios, setExercicios] = useState([]);
   const [gruposMusculares, setGruposMusculares] = useState({});
   const [niveis, setNiveis] = useState({});
@@ -92,9 +92,17 @@ function CardsLibrary() {
     return <Mensagem>Nenhum exercício cadastrado ainda.</Mensagem>;
   }
 
+  const exerciciosVisiveis = grupoSelecionado
+    ? exercicios.filter((item) => item.grupoMuscular === grupoSelecionado)
+    : exercicios;
+
+  if (!exerciciosVisiveis.length) {
+    return <Mensagem>Nenhum exercício neste grupo muscular.</Mensagem>;
+  }
+
   return (
     <CarrosselCards>
-      {exercicios.map((item) => {
+      {exerciciosVisiveis.map((item) => {
         const { id, nome, grupoMuscular, nivel, gifUrl, equipamento } = item;
 
         return (

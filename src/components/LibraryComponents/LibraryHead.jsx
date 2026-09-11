@@ -44,7 +44,9 @@ function LibraryHead() {
       })
       .catch((err) => {
         if (!ativo) return;
-        setErro(err.mensagem || "Não foi possível carregar as opções do formulário.");
+        setErro(
+          err.mensagem || "Não foi possível carregar as opções do formulário.",
+        );
       })
       .finally(() => {
         if (ativo) setCarregandoOpcoes(false);
@@ -69,8 +71,15 @@ function LibraryHead() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    if (!form.nome.trim() || !form.grupoMuscular || !form.nivel || !form.descricaoExecucao.trim()) {
-      setErro("Preencha nome, grupo muscular, nível e Descrição de Execução do Exercício antes de cadastrar.");
+    if (
+      !form.nome.trim() ||
+      !form.grupoMuscular ||
+      !form.nivel ||
+      !form.descricaoExecucao.trim()
+    ) {
+      setErro(
+        "Preencha nome, grupo muscular, nível e Descrição de Execução do Exercício antes de cadastrar.",
+      );
       return;
     }
 
@@ -84,6 +93,7 @@ function LibraryHead() {
       setErro(err.mensagem || "Não foi possível cadastrar o exercício.");
     } finally {
       setEnviando(false);
+      alert("Exercício cadastrado com sucesso!");
     }
   }
 
@@ -109,10 +119,7 @@ function LibraryHead() {
           Adicionar exercicio
         </button>
         <ModalLibrary isOpen={openModal} setCloseModal={fecharModal}>
-          <form
-            onSubmit={handleSubmit}
-            className="fle p-4 text-2xl space-y-2 "
-          >
+          <form onSubmit={handleSubmit} className="fle p-4 text-2xl space-y-2 ">
             <div className="text-red-200 text-center font-montserrat">
               <h1>CRIAR EXERCICIO</h1>
             </div>

@@ -144,7 +144,7 @@ function VolumeTreino() {
         <>
           <span className="font-semibold text-white">O que é volume? </span>É o
           peso total que você moveu na sessão: séries × repetições × carga. É a
-          principal métrica de sobrecarga progressiva — subir o volume ao longo
+          principal métrica de sobrecarga progressiva subir o volume ao longo
           das semanas é o que faz o músculo crescer.
         </>
       }

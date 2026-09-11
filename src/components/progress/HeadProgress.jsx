@@ -11,7 +11,7 @@ function HeadProgress() {
           CALCULE SUAS MÉTRICAS
         </h2>
         <h3 className="text-gray-300 wrap-break-word">
-          Digite seus números e receba o resultado na hora — cada métrica vem
+          Digite seus números e receba o resultado na hora, cada métrica vem
           com o conceito explicado, para você entender o que está calculando.
         </h3>
       </div>

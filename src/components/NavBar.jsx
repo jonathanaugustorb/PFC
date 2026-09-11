@@ -41,16 +41,16 @@ function NavBar() {
           setCloseModal={() => setOpenModaL(!openModal)}
         >
           <form className="flex flex-col gap-3 items-center">
-            <h2 className="text-red-200 font-montserrat text-2xl">LOGIN</h2>
+            <h2 className="text-red-200 font-montserrat text-4xl">LOGIN</h2>
             <input
               type="text"
               placeholder="Digite usuario"
-              className="bg-black-75 text-white font-light rounded-xl border-2 border-gray-400 p-1"
+              className="text-2xl text-white font-light  border-2  p-1 bg-white/5 backdrop-blur-xl border-gray-700 rounded-xl shadow-lg shadow-black/20"
             />
             <input
               type="password"
               placeholder="Digite a senha"
-              className="bg-black-75 text-white font-light rounded-xl border-2 border-gray-400 p-1"
+              className="text-2xl text-white font-light  p-1 bg-white/5 backdrop-blur-xl border-gray-700 rounded-xl shadow-lg shadow-black/20 border-2 m-2"
             />
             <div className="flex text-sm font-medium text-red-200 gap-4">
               <p>Esqueceu a senha?</p>
@@ -58,7 +58,7 @@ function NavBar() {
             </div>
             <button
               type="submit"
-              className="w-1/3 bg-red-500 text-red-200 rounded-md cursor-pointer hover:bg-red-900 hover:text-white py-2"
+              className="w-1/3 bg-red-500 text-red-200 rounded-md cursor-pointer hover:bg-red-900 hover:text-white py-2 my-2"
             >
               {" "}
               Entrar

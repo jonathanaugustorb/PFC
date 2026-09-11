@@ -108,7 +108,7 @@ function CalculadoraHidratacao({ pesoKg, aoAlterarPeso }) {
           <span className="font-semibold text-white">O que é a meta? </span>É
           quanta água seu corpo precisa em um dia: uma parte vem do seu peso
           corporal e outra do tempo que você treina. Água regula a temperatura,
-          transporta nutrientes e sustenta a contração muscular — treinar
+          transporta nutrientes e sustenta a contração muscular treinar
           desidratado custa força.
         </>
       }
